@@ -35,7 +35,7 @@ python3 -m pip install jsonpickle
 
 ### If you are on Windows
 
-1. Ensure you have **Python 3.1.10** installed by writing ```py --version``` in the terminal; if not, [install Python](https://www.python.org/downloads/), open the .exe file and follow the steps.
+1. Ensure you have **Python 3.1.10** or above installed by writing ```py --version``` in the terminal; if not, [install Python](https://www.python.org/downloads/), open the .exe file and follow the steps.
 2. Check if you have pip installed by running ```py -m pip --version``` in the terminal.
 3. If you don't have pip installed, run ```py -m ensurepip --default-pip``` in the terminal, and then repeat step 2.
 
