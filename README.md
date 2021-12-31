@@ -1,6 +1,11 @@
 # Who-Said-It-
 A guessing game that scrapes quotes from a website and displays a random quote to the user; the user must guess the quote.
 
+&nbsp;
+&nbsp;
+&nbsp;
+
+
 
 
 ### If you are on MacOS/Linux
@@ -21,8 +26,12 @@ python3 -m pip install jsonpickle
 
 ```python3 guessing_game.py```
 
+&nbsp;
+&nbsp;
 
-&nbsp
+
+
+
 
 ### If you are on Windows
 
@@ -43,6 +52,9 @@ py -m pip install jsonpickle
 ```py guessing_game.py```
 
 
+
+&nbsp;
+&nbsp;
 
 ## Limitations/Design Choices
 
