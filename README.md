@@ -8,7 +8,7 @@ A guessing game that scrapes quotes from a website and displays a random quote t
 3. If you don't have pip installed, run ```python3 -m ensurepip --default-pip``` in the terminal, and then repeat step 2.
 
 4. Now, in the terminal, do
-5. 
+
 ```
 python3 -m pip install requests
 python3 -m pip install bs4
