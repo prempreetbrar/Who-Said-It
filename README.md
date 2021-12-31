@@ -1,6 +1,8 @@
 # Who-Said-It-
 A guessing game that scrapes quotes from a website and displays a random quote to the user; the user must guess the quote.
 
+
+
 ### If you are on MacOS/Linux
 
 1. Ensure you have **Python 3.1.10** or above installed by writing ```python3 --version``` in the terminal; if not, [install Python](https://www.python.org/downloads/), open the .pkg file and follow the steps.
@@ -18,6 +20,8 @@ python3 -m pip install jsonpickle
 5. To run the code in the terminal, ensure you are in the directory containing guessing_game.py, and write
 
 ```python3 guessing_game.py```
+
+
 
 
 ### If you are on Windows
