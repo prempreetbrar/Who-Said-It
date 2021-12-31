@@ -17,17 +17,17 @@
 #	- Web-scrape code needs to be updated if website changes.
 #	- Web-scrape delay reduces load on website being scraped, but forces user to wait for scraping
 #	  to finish.
+#	- No error-handling if user enters in name of .csv file that doesn't exist
 
 
 
-
-from requests import get 							# for http requests		
+from requests import get 						# for http requests		
 from bs4 import BeautifulSoup						# for webscraping
-from time import sleep								# to add a delay between the scraping of pages
-from csv import DictReader, DictWriter				# to read and write to a csv
-from re import compile								# regex for input validation
-from random import choice							# for choosing of random quote
-from jsonpickle import encode, decode				# for saving or loading a game
+from time import sleep							# to add a delay between the scraping of pages
+from csv import DictReader, DictWriter					# to read and write to a csv
+from re import compile							# regex for input validation
+from random import choice						# for choosing of random quote
+from jsonpickle import encode, decode					# for saving or loading a game
 
 URL = "http://quotes.toscrape.com"
 REQUEST_DELAY = 1
@@ -45,7 +45,7 @@ class QuoteScraper:
 	def load_quotes_from_csv(self, file_name):
 		with open(file_name, "r") as quote_file:
 			csv_reader = DictReader(quote_file)		# iterator containing OrderedDicts
-			next(csv_reader)						# invoke next to "skip" the row containing headers in the CSV
+			next(csv_reader)				# invoke next to "skip" the row containing headers in the CSV
 			quotes = list(csv_reader)
 
 		return quotes
