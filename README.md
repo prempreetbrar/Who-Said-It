@@ -22,7 +22,7 @@ python3 -m pip install jsonpickle
 ```python3 guessing_game.py```
 
 
-
+&nbsp
 
 ### If you are on Windows
 
