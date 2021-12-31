@@ -62,9 +62,13 @@ py -m pip install jsonpickle
 - No delay is needed since the website is intended for scraping (but I added a delay to follow best practices and reduce server load).
 - This application could work simply by scraping every time it is run without using a csv, but instead I force the user to load from a csv since it reduces the load on the webpage; it is up to the users discretion if they want to scrape each time or simply load from an existing file (the intention is that you scrape maybe once a week, and use an existing csv for the other times you run the program).
 
+&nbsp;
+
 - The quote chosen is supposed to be "random"; I used jsonpickle in-case the user wants to save, quit, and come back later. I used jsonpickle instead of the built-in pickle module because it is more readable.
 - *DO NOT put malicious code in the json "saved_game" file you load into the program. The code is automatically executed when it is unpickled from the json file, so malicious code could destroy the program.*
 - The "saved_game.json" file is a hardcoded name, which makes it difficult for the user to have multiple save files. I will fix this in a later version.
+
+&nbsp;
 
 - No unittests have been implemented; I hope to implement these when I have time. I consider this project "incomplete" because of this.
 - There are a few places where I could implement try-except blocks; specifically, for File I/O. I will implement these blocks in the future.
