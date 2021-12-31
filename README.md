@@ -17,7 +17,7 @@ python3 -m pip install jsonpickle
 
 5. To run the code in the terminal, ensure you are in the directory containing guessing_game.py, and write
 
-python3 guessing_game.py
+```python3 guessing_game.py```
 
 
 ### If you are on Windows
