@@ -10,7 +10,7 @@ A guessing game that scrapes quotes from a website and displays a random quote t
 
 ### If you are on MacOS/Linux
 
-1. Ensure you have **Python 3.1.10** or above installed by writing ```python3 --version``` in the terminal; if not, [install Python](https://www.python.org/downloads/), open the .pkg file and follow the steps.
+1. Ensure you have **Python 3.10.1** or above installed by writing ```python3 --version``` in the terminal; if not, [install Python](https://www.python.org/downloads/), open the .pkg file and follow the steps.
 2. Check if you have pip installed by running ```python3 -m pip --version``` in the terminal.
 3. If you don't have pip installed, run ```python3 -m ensurepip --default-pip``` in the terminal, and then repeat step 2.
 
@@ -35,7 +35,7 @@ python3 -m pip install jsonpickle
 
 ### If you are on Windows
 
-1. Ensure you have **Python 3.1.10** or above installed by writing ```py --version``` in the terminal; if not, [install Python](https://www.python.org/downloads/), open the .exe file and follow the steps.
+1. Ensure you have **Python 3.10.1** or above installed by writing ```py --version``` in the terminal; if not, [install Python](https://www.python.org/downloads/), open the .exe file and follow the steps (make sure the box that says "*Add Python 3.10.X to PATH*" is checked).
 2. Check if you have pip installed by running ```py -m pip --version``` in the terminal.
 3. If you don't have pip installed, run ```py -m ensurepip --default-pip``` in the terminal, and then repeat step 2.
 
