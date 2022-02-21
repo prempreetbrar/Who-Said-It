@@ -65,11 +65,9 @@ py -m pip install jsonpickle
 
 - The quote chosen is supposed to be "random"; I used jsonpickle in-case the user wants to save, quit, and come back later. I used jsonpickle instead of the built-in pickle module because it is more readable.
 - *DO NOT put malicious code in the json "saved_game" file you load into the program. The code is automatically executed when it is unpickled from the json file, so malicious code could destroy the program.*
-- The "saved_game.json" file is a hardcoded name, which makes it difficult for the user to have multiple save files. I will fix this in a later version.
 
 
 - No unittests have been implemented; I hope to implement these when I have time. I consider this project "incomplete" because of this.
-- There are a few places where I could implement try-except blocks; specifically, for File I/O. I will implement these blocks in the future.
 - I used regular expressions to validate some of the filenames; my use of regex isn't that extensive, and I hope to make more use of it in another project.
 - I was going to implement an SQLite3 database that can also be used to store quotes; however, there wasn't any analysis necessary on the data so I decided against it; I hope to use SQLite3 in another project.
 
