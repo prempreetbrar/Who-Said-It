@@ -2,34 +2,34 @@
 # Who Said It?
 
 # The Game: A quote is given to the user, and the user must identify the author of the quote.
-# 	The user has a fixed number of guesses; if they guess incorrectly, then hints are given to
-# 	help them. If they run out of guesses, the game is over. After finishing a game, the user can
-# 	choose to quit or continue playing. The user can also save their progress at any time.
+#   The user has a fixed number of guesses; if they guess incorrectly, then hints are given to
+#   help them. If they run out of guesses, the game is over. After finishing a game, the user can
+#   choose to quit or continue playing. The user can also save their progress at any time.
 
 # Features: 
-# 	- Web-scrapes a given URL for quotes, moving automatically from one page to the next, and
-#	  stores the author's name, the quote and the link to the author's bio in a CSV file.
-#	- Uses regex expressions to ensure that the user enters an appropriate file name when prompted.
-#	- Makes HTTP requests to a given URL for web-scraping.
-#	- Uses JSON pickling to allow the user to save the game and resume at any point.
+#   - Web-scrapes a given URL for quotes, moving automatically from one page to the next, and
+#     stores the author's name, the quote and the link to the author's bio in a CSV file.
+#   - Uses regex expressions to ensure that the user enters an appropriate file name when prompted.
+#   - Makes HTTP requests to a given URL for web-scraping.
+#   - Uses JSON pickling to allow the user to save the game and resume at any point.
 
 # Limitations:
-#	- Web-scrape code needs to be updated if website changes.
-#	- Web-scrape delay reduces load on website being scraped, but forces user to wait for scraping
-#	  to finish.
-#	- No error-handling if user enters in name of .csv file that doesn't exist
+#   - Web-scrape code needs to be updated if website changes.
+#   - Web-scrape delay reduces load on website being scraped, but forces user to wait for scraping
+#     to finish.
+#   - No error-handling if user enters in name of .csv file that doesn't exist
 
 
-from requests import get 						# for http requests		
-from bs4 import BeautifulSoup						# for webscraping
+from requests import get                        # for http requests     
+from bs4 import BeautifulSoup                   # for webscraping
 
 from sys import exit                            # in the event of an error
-from time import sleep							# to add a delay between the scraping of pages
+from time import sleep                          # to add a delay between the scraping of pages
 
-from csv import DictReader, DictWriter					# to read and write to a csv
-from re import compile							# regex for input validation
-from random import choice						# for choosing of random quote
-from jsonpickle import encode, decode					# for saving or loading a game
+from csv import DictReader, DictWriter          # to read and write to a csv
+from re import compile                          # regex for input validation
+from random import choice                       # for choosing of random quote
+from jsonpickle import encode, decode           # for saving or loading a game
 
 URL = "http://quotes.toscrape.com"
 REQUEST_DELAY = 1
@@ -46,19 +46,19 @@ class QuoteScraper:
 
     def load_quotes_from_csv(self, file_name):
         quote_file = open_file(file_name, "r")
-        csv_reader = DictReader(quote_file)		# iterator containing OrderedDicts
+        csv_reader = DictReader(quote_file)     # iterator containing OrderedDicts
         
-        next(csv_reader)				# invoke next to "skip" the row containing headers in the CSV
+        next(csv_reader)                # invoke next to "skip" the row containing headers in the CSV
         quotes = list(csv_reader)
         quote_file.close()
         return quotes
 
 
     def update_csv(self, file_name):
-        quote_file = open_file(file_name, "w")													
+        quote_file = open_file(file_name, "w")                                                  
         csv_writer = DictWriter(quote_file, fieldnames = ("Name", "Quote", "Link to Bio"))
         csv_writer.writeheader()
-        print()																
+        print()                                                             
 
         while self._page_exists:
             print(f"Scraping {URL}/page/{self._page_number}, please wait...")
@@ -202,7 +202,7 @@ class UserInterface:
                 birthday = author_parsed.find(class_ = "author-born-date").get_text()
                 birth_location = author_parsed.find(class_ = "author-born-location").get_text()
                 # spaces used over \t for formatting purposes
-                return f"    Hint 1: The author was born on {birthday} {birth_location}."				
+                return f"    Hint 1: The author was born on {birthday} {birth_location}."               
 
             case 3:
                 return f"    Hint 2: The author's first name starts with {self._author_fname[0]}."
