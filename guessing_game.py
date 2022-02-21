@@ -23,7 +23,7 @@
 from requests import get 						# for http requests		
 from bs4 import BeautifulSoup						# for webscraping
 
-from sys import exit                                    # in the event of an error
+from sys import exit                            # in the event of an error
 from time import sleep							# to add a delay between the scraping of pages
 
 from csv import DictReader, DictWriter					# to read and write to a csv
