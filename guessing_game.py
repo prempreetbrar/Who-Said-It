@@ -1,4 +1,3 @@
-# Author: Prempreet Brar
 # Who Said It?
 
 # The Game: A quote is given to the user, and the user must identify the author of the quote.
